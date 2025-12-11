@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Absensi Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Absensi Kehadiran Siswa</h1>
+        
+        <form id="attendance-form">
+            <div class="form-group">
+                <label for="nis">NIS (Nomor Induk Siswa):</label>
+                <input type="text" id="nis" name="nis" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status Kehadiran:</label>
+                <select id="status" name="status" required>
+                    <option value="">-- Pilih Status --</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Izin">Izin</option>
+                    <option value="Sakit">Sakit</option>
+                    <option value="Alpha">Alpha</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="keterangan">Keterangan (Opsional):</label>
+                <textarea id="keterangan" name="keterangan"></textarea>
+            </div>
+
+            <button type="submit">Catat Kehadiran</button>
+            
+            <p id="message" class="hidden"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
